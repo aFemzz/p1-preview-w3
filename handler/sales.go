@@ -16,7 +16,7 @@ func SalesGetList() {
 	}
 	defer db.Close()
 
-	// Define the query to retrieve books by author 'Jane Smith'
+	// Define the query to retrieve sales
 	query := `
 	SELECT book.book_type, SUM(bookstore_order.price) AS total_sales
 	FROM book
@@ -31,20 +31,20 @@ func SalesGetList() {
 	}
 	defer rows.Close()
 
-	// Initialize a slice to store the list of books
+	// Initialize a slice to store the list of sales
 	var listSales []entity.Sales
 
 	// Iterate over the rows
 	for rows.Next() {
-		// Create a new Books struct to store book data
+		// Create a new sales struct to store book data
 		var s entity.Sales
 
-		// Scan the values from the row into the Books struct fields
+		// Scan the values from the row into the sales struct fields
 		if err := rows.Scan(&s.Physical, &s.Ebook); err != nil {
 			log.Fatal("Error scanning row:", err)
 		}
 
-		// Append the Books struct to the listSales slice
+		// Append the sales struct to the listSales slice
 		listSales = append(listSales, s)
 	}
 
@@ -53,7 +53,7 @@ func SalesGetList() {
 		log.Fatal("Error iterating over rows:", err)
 	}
 
-	// Print the list of books
+	// Print the list of sales
 	fmt.Println("=========================")
 	fmt.Println("TOTAL SALES FOR EACH BOOK TYPE")
 	fmt.Println("=========================")

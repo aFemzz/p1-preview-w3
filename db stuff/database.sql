@@ -50,3 +50,11 @@ INSERT INTO bookstore_order (customer_name, customer_email, order_date, price, b
 -- Insert sales for the second author
 INSERT INTO bookstore_order (customer_name, customer_email, order_date, price, book_id) VALUES
 ('Alice Johnson', 'alice.johnson@example.com', '2024-05-02', 12.99, 3);  -- Assuming book_id 3 corresponds to Jane Smith's book
+
+-- Insert additional data to sales
+INSERT INTO bookstore_order (customer_name, customer_email, order_date, price, book_id) VALUES
+('Alice Johnson', 'alice.johnson@example.com', '2024-05-06', 25.99, 3),  -- Assuming book_id 3 corresponds to a book
+('Bob Williams', 'bob.williams@example.com', '2024-05-07', 18.50, 1),     -- Assuming book_id 1 corresponds to a book
+('Alice Johnson', 'alice.johnson@example.com', '2024-05-08', 22.75, 2),  -- Assuming book_id 2 corresponds to a book
+('John Smith', 'john.smith@example.com', '2024-05-09', 30.00, 4),         -- Assuming book_id 4 corresponds to a book
+('Emily Davis', 'emily.davis@example.com', '2024-05-10', 12.99, 5);        -- Assuming book_id 5 corresponds to a book
