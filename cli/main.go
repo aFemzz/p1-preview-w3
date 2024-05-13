@@ -18,15 +18,11 @@ func main() {
 	switch command {
 	case "books":
 		handler.BooksGetList()
-
 	case "sales":
 		handler.SalesGetList()
-
 	case "customers":
-
-		fmt.Println("This is customers")
+		handler.CustomerGetList()
 	case "topauthor":
-
 		fmt.Println("This is topauthor")
 	default:
 		fmt.Println("Unknown Command:", command)
