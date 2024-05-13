@@ -20,8 +20,8 @@ func main() {
 		handler.BooksGetList()
 
 	case "sales":
+		handler.SalesGetList()
 
-		fmt.Println("This is sales")
 	case "customers":
 
 		fmt.Println("This is customers")
